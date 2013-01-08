@@ -5,11 +5,9 @@ namespace MoreOrLessPodcastFilter.Filters
 {
     public class NoWorldServiceFilter : IFilter
     {
-        public XDocument Execute(XDocument nativeFeed)
+        public XDocument Execute(XDocument unfilteredFeed)
         {
-            
-
-
+			return unfilteredFeed;
         }
     }
 }

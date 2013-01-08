@@ -5,13 +5,13 @@ using MoreOrLessPodcastFilter.Readers;
 
 namespace MoreOrLessPodcastFilter
 {
-    public class MoreOrLess : IHttpHandler
+    public class MoreOrLessHandler : IHttpHandler
     {
         private readonly IReader _reader;
         private readonly IFilter _filter;
         private const string RssMimeType = "application/rss+xml";
 
-        public MoreOrLess(IReader reader, IFilter filter)
+        public MoreOrLessHandler(IReader reader, IFilter filter)
         {
             if (reader == null) throw new ArgumentNullException("reader");
             if (filter == null) throw new ArgumentNullException("filter");
