@@ -71,6 +71,7 @@
   <ItemGroup>
     <Compile Include="Filters\NoWorldServiceFilter.cs" />
     <Compile Include="Filters\IFilter.cs" />
+    <Compile Include="Filters\WorldServiceOnlyFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

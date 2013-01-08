@@ -17,6 +17,7 @@ namespace MoreOrLessPodcastFilter.Ioc
 					.DependsOn(new { podcastUri = FromConfigurationFile("PodcastUri") }),
 
 				Component.For<IFilter>().ImplementedBy<NoWorldServiceFilter>()
+					.Named("NoWorldService")
 					.DependsOn(new { worldServiceTitlePattern = FromConfigurationFile("WorldServiceTitlePattern") }),
 
 				Component.For<IHttpHandler>().ImplementedBy<MoreOrLessHandler>()
