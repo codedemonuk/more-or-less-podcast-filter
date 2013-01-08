@@ -3,7 +3,7 @@ using System.Web;
 using MoreOrLessPodcastFilter.Filters;
 using MoreOrLessPodcastFilter.Readers;
 
-namespace MoreOrLessPodcastFilter
+namespace MoreOrLessPodcastFilter.Handlers
 {
 	public class MoreOrLessHandler : IHttpHandler
 	{
@@ -26,7 +26,9 @@ namespace MoreOrLessPodcastFilter
 			var filteredFeed = _filter.Execute(nativeFeed);
 
 			context.Response.ContentType = RssMimeType;
+			context.Response.StatusCode = 200;
 			context.Response.Write(filteredFeed);
+			context.Response.Flush();
 		}
 
 		public bool IsReusable
