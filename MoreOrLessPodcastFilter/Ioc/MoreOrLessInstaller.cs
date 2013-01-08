@@ -16,7 +16,8 @@ namespace MoreOrLessPodcastFilter.Ioc
 				Component.For<IReader>().ImplementedBy<WebRssReader>()
 					.DependsOn(new { podcastUri = FromConfigurationFile("PodcastUri") }),
 
-				Component.For<IFilter>().ImplementedBy<NoWorldServiceFilter>(),
+				Component.For<IFilter>().ImplementedBy<NoWorldServiceFilter>()
+					.DependsOn(new { worldServiceTitlePattern = FromConfigurationFile("WorldServiceTitlePattern") }),
 
 				Component.For<IHttpHandler>().ImplementedBy<MoreOrLessHandler>()
 					.Named("/MOREORLESS.ASHX")
