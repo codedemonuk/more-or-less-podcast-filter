@@ -60,9 +60,17 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Filter.cs" />
+    <Compile Include="IFilter.cs" />
+    <Compile Include="IReader.cs" />
+    <Compile Include="MoreOrLess.ashx.cs">
+      <DependentUpon>MoreOrLess.ashx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="MoreOrLess.ashx" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
