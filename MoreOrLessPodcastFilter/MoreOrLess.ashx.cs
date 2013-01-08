@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Web;
+using MoreOrLessPodcastFilter.Filters;
+using MoreOrLessPodcastFilter.Readers;
 
 namespace MoreOrLessPodcastFilter
 {

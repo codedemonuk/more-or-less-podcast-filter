@@ -1,6 +1,6 @@
 using System.Xml.Linq;
 
-namespace MoreOrLessPodcastFilter
+namespace MoreOrLessPodcastFilter.Readers
 {
     public interface IReader
     {
